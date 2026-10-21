@@ -1,0 +1,27 @@
+# OS
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Office temp / lock files
+~$*
+.~lock.*
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+
+# Claude Code local files
+.claude/
+
+# Python
+__pycache__/
+
+# Node (if a build step is added later)
+node_modules/
+
+# Local scratch / intermediate conversion output
+tmp/
+scratch/
+*.log

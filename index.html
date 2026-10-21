@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>telc Deutsch B2 – Companion · telc Deutsch B2</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.dataset.theme = localStorage.getItem('telc-b2-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script>
+</head>
+<body data-root="">
+<button class="menu-btn" id="menu-btn" aria-label="Menü">☰</button>
+<button class="theme-btn" id="theme-btn" aria-label="Dark/Light">◐</button>
+<nav class="sidebar" id="sidebar" aria-label="Navigation">
+<a class="brand" href="index.html">telc B2<span>Companion</span></a>
+<input type="search" id="search" placeholder="Suchen …" autocomplete="off" aria-label="Suche">
+<div id="search-results" class="search-results" hidden></div>
+<div class="nav-group">
+<a href="index.html" class="active">Start</a>
+<a href="checkliste.html">Checkliste</a>
+</div>
+<div class="nav-label">Grammatik</div><div class="nav-group">
+<a href="grammatik/grundlagen.html">Grundlagen &amp; Zeiten</a>
+<a href="grammatik/konnektoren.html">Konnektoren</a>
+<a href="grammatik/praepositionen.html">Präpositionen</a>
+<a href="grammatik/infinitiv.html">Infinitivkonstruktionen</a>
+<a href="grammatik/passiv-relativ-stil.html">Passiv, Relativsätze &amp; Stil</a>
+</div><div class="nav-label">Prüfungsteile</div><div class="nav-group">
+<a href="sprechen.html">Sprechen</a>
+<a href="schreiben.html">Schreiben</a>
+<a href="pruefung.html">Prüfungsschicht</a>
+<a href="lesen.html">Lesen</a>
+<a href="hoeren.html">Hören</a>
+</div>
+</nav>
+<main>
+<h1>telc Deutsch B2 – Companion</h1>
+<p class="lead">Lernbegleiter für die telc-Prüfung Deutsch B2: Grammatik, Sprechen, Schreiben, Lesen, Hören.</p>
+<h2>Studienplan</h2><section class="cards">
+<a class="card" href="checkliste.html"><h3>Checkliste</h3><p>50 Einheiten in 3 Phasen mit Output-Aufgaben.</p><div class="progress"><div id="home-progress-bar"></div></div><small id="home-progress-text" data-total="50"></small></a>
+</section><h2>Grammatik</h2><section class="cards">
+<a class="card" href="grammatik/grundlagen.html"><h3>Grundlagen &amp; Zeiten</h3><p>Pronomen, Artikel, Adjektivdeklination, Verben, Konjunktiv II der Vergangenheit</p></a>
+<a class="card" href="grammatik/konnektoren.html"><h3>Konnektoren</h3><p>Verbindungswörter nach Wortstellung, zweiteilige und erweiterte Konnektoren</p></a>
+<a class="card" href="grammatik/praepositionen.html"><h3>Präpositionen</h3><p>Kasus nach Präposition, Verben/Adjektive/Nomen mit Präposition, da-/wo-Compounds</p></a>
+<a class="card" href="grammatik/infinitiv.html"><h3>Infinitivkonstruktionen</h3><p>zu + Infinitiv nach Verben, Adjektiven und Nomen; Infinitiv ohne zu; Doppelinfinitiv</p></a>
+<a class="card" href="grammatik/passiv-relativ-stil.html"><h3>Passiv, Relativsätze &amp; Stil</h3><p>Passiv und Ersatzformen, Partizipialattribute, Relativsätze, Nominalisierung, Wortbildung</p></a>
+</section><h2>Prüfungsteile</h2><section class="cards">
+<a class="card" href="sprechen.html"><h3>Sprechen</h3><p>Teil 1–3, Gesprächsmanagement, Präsentation</p></a>
+<a class="card" href="schreiben.html"><h3>Schreiben</h3><p>E-Mails, Beschwerdebrief, Zusammenfassung, Forumsbeitrag</p></a>
+<a class="card" href="pruefung.html"><h3>Prüfungsschicht</h3><p>Prüfungsaufbau, Bewertung, Vorlagen und telc-Fallen (Step3)</p></a>
+<a class="card" href="lesen.html"><h3>Lesen</h3><p>Textverständnis &amp; Dekodierung</p></a>
+<a class="card" href="hoeren.html"><h3>Hören</h3><p>Signalwörter &amp; Strategie</p></a>
+</section><p class="note">Quellen: <code>source/DB2CS_v3.docx</code>, <code>source/telc_B2_Grammatik_Checkliste.docx</code>. Seiten werden mit <code>python tools/build.py</code> generiert.</p><h2>Weiterführend</h2><p><a href="https://github.com/kalaiguna/deutsch-lernpaket">deutsch-lernpaket</a> – Claude-Skills für tägliche Übung, Wiederholung und telc-Prüfungssimulation (Notion-Fortschritt, Dashboard).</p>
+
+</main>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

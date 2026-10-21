@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prüfungsschicht · telc Deutsch B2</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.dataset.theme = localStorage.getItem('telc-b2-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script>
+</head>
+<body data-root="">
+<button class="menu-btn" id="menu-btn" aria-label="Menü">☰</button>
+<button class="theme-btn" id="theme-btn" aria-label="Dark/Light">◐</button>
+<nav class="sidebar" id="sidebar" aria-label="Navigation">
+<a class="brand" href="index.html">telc B2<span>Companion</span></a>
+<input type="search" id="search" placeholder="Suchen …" autocomplete="off" aria-label="Suche">
+<div id="search-results" class="search-results" hidden></div>
+<div class="nav-group">
+<a href="index.html">Start</a>
+<a href="checkliste.html">Checkliste</a>
+</div>
+<div class="nav-label">Grammatik</div><div class="nav-group">
+<a href="grammatik/grundlagen.html">Grundlagen &amp; Zeiten</a>
+<a href="grammatik/konnektoren.html">Konnektoren</a>
+<a href="grammatik/praepositionen.html">Präpositionen</a>
+<a href="grammatik/infinitiv.html">Infinitivkonstruktionen</a>
+<a href="grammatik/passiv-relativ-stil.html">Passiv, Relativsätze &amp; Stil</a>
+</div><div class="nav-label">Prüfungsteile</div><div class="nav-group">
+<a href="sprechen.html">Sprechen</a>
+<a href="schreiben.html">Schreiben</a>
+<a href="pruefung.html" class="active">Prüfungsschicht</a>
+<a href="lesen.html">Lesen</a>
+<a href="hoeren.html">Hören</a>
+</div>
+<div class="nav-label">Auf dieser Seite</div><div class="nav-group toc">
+<a href="#pruefungsaufbau-300-punkte">1. Prüfungsaufbau — 300 Punkte</a>
+<a href="#schreiben-30-min-min-150-woerter">2. Schreiben — 30 Min., min. 150 Wörter</a>
+<a href="#sprechen-ca-15-min-paarweise-20-min-vorbereitung">3. Sprechen — ca. 15 Min., paarweise, 20 Min. Vorbereitung</a>
+<a href="#teil-1-themen-mit-vorsicht">4. Teil-1-Themen — mit Vorsicht</a>
+<a href="#die-16-offiziellen-themenbereiche-anhang-t">5. Die 16 offiziellen Themenbereiche (Anhang T)</a>
+<a href="#lesen-die-telc-fallen">6. Lesen — die telc-Fallen</a>
+<a href="#hoeren-richtig-falsch-richtig-verstehen">7. Hören — Richtig/Falsch richtig verstehen</a>
+<a href="#sprachbausteine-30-punkte-3-schritte">8. Sprachbausteine — 30 Punkte, 3 Schritte</a>
+<a href="#selbst-nachpruefen">9. Selbst nachprüfen</a>
+</div>
+</nav>
+<main>
+<h1>Prüfungsschicht</h1>
+<p class="lead">Prüfungsaufbau, Bewertung, Vorlagen und telc-Fallen (Step3)</p>
+<p class="note"><strong>Quellenhinweis:</strong> Die Angaben auf dieser Seite beruhen auf dem <em>telc Deutsch B2 Handbuch</em> (8. Aufl. 2019) und der offiziellen telc-Prüfungsseite. Es handelt sich um eigene Zusammenfassungen zum persönlichen Lernen; die Rechte am Handbuch und an den telc-Prüfungsmaterialien liegen bei der telc gGmbH bzw. dem Verlag. telc® ist eine eingetragene Marke der telc gGmbH. Dieses Projekt steht in keiner Verbindung zu telc.</p>
+<section id="pruefungsaufbau-300-punkte"><h2>1. Prüfungsaufbau — 300 Punkte<a class="anchor" href="#pruefungsaufbau-300-punkte" aria-label="Link">#</a></h2>
+<p>Separates Blatt, nicht in DB2CS einbauen. Alles unten aus dem telc Handbuch B2 (8. Aufl. 2019, S. 27–46) und der offiziellen Prüfungsseite, sofern nicht anders markiert.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Subtest</strong></th>
+<th><strong>Teile</strong></th>
+<th><strong>Aufgabentypen</strong></th>
+<th><strong>Punkte</strong></th>
+<th><strong>Zeit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lesen</td>
+<td>3</td>
+<td>T1: 5 Texte → 10 Überschriften zuordnen · T2: 5 Multiple-Choice (3 Optionen) · T3: 12 Anzeigen → 10 Situationen</td>
+<td>75</td>
+<td>90 Min. (mit SB)</td>
+</tr>
+<tr>
+<td>Sprachbausteine</td>
+<td>2</td>
+<td>T1: 10 MC, Grammatik · T2: 10 Lücken, 15 Wörter im Kasten, Lexik</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td>Hören</td>
+<td>3</td>
+<td>alle drei Teile <strong>Richtig–Falsch</strong> · T1: 5 (Nachrichten) · T2: 10 (Interview) · T3: 5 (Durchsagen)</td>
+<td>75</td>
+<td>ca. 20 Min.</td>
+</tr>
+<tr>
+<td>Schreiben</td>
+<td>1</td>
+<td>eine <strong>halbformelle E-Mail</strong>, 1 von 2 Aufgaben, min. <strong>150 Wörter</strong></td>
+<td>45</td>
+<td>30 Min.</td>
+</tr>
+<tr>
+<td>Sprechen</td>
+<td>3</td>
+<td>Erfahrungen · Diskussion · Planen — je 25 Punkte</td>
+<td>75</td>
+<td>ca. 15 Min.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Bestehensgrenze 60 %</strong> in jedem Teil getrennt: 135/225 schriftlich, 45/75 mündlich. In T1 Lesen sind 5 der 10 Überschriften Ablenker; in T3 bleiben 2 Anzeigen übrig.</p>
+</section>
+<section id="schreiben-30-min-min-150-woerter"><h2>2. Schreiben — 30 Min., min. 150 Wörter<a class="anchor" href="#schreiben-30-min-min-150-woerter" aria-label="Link">#</a></h2>
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><strong>Die 3-von-4-Regel:</strong> Die Aufgabe nennt VIER Leitpunkte. Du behandelst DREI — entweder drei der vier, oder zwei der vier plus einen eigenen Aspekt. Also auswählen und ausbauen, nicht alle abhaken. Drei gut entwickelte Punkte schlagen vier dünne.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bewertungskriterien-je-a-5-b-3-c-1-d-0-summe-3-max-45">Bewertungskriterien (je A=5 / B=3 / C=1 / D=0, Summe × 3 = max. 45)</h3>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Kriterium</strong></th>
+<th><strong>Was zählt</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Berücksichtigung der Leitpunkte</td>
+<td>Sind drei Punkte inhaltlich ausgeführt — nicht nur genannt?</td>
+</tr>
+<tr>
+<td>2. Kommunikative Gestaltung</td>
+<td>Betreff, Anrede, Einleitung, Reihenfolge, Schluss, Register, Textverknüpfung</td>
+</tr>
+<tr>
+<td>3. Formale Richtigkeit</td>
+<td>Grammatik, Orthografie, Zeichensetzung</td>
+</tr>
+</tbody>
+</table></div>
+<p>Grammatik ist also nur <strong>ein Drittel</strong> der Note. Kriterium 1 ist genauso viel wert — und billiger zu holen.</p>
+<h3 id="vor-dem-abgeben">Vor dem Abgeben</h3>
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><p>☐ Drei Punkte behandelt (3 vorgegebene ODER 2 + 1 eigener Aspekt)?</p>
+<p>☐ Je 2–3 ausgeführte Sätze, mit Begründung oder Beispiel?</p>
+<p>☐ Sinnvolle Reihenfolge der Punkte selbst gewählt?</p>
+<p>☐ Auf die Anzeige Bezug genommen?</p>
+<p>☐ Betreff, Anrede, Einleitung, Schluss vorhanden?</p>
+<p>☐ Sie-Form durchgehend, kein du-Rutscher?</p>
+<p>☐ Über 150 Wörter?</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Die Aufgabenstellung verlangt den Betreff ausdrücklich: „Überlegen Sie sich … einen passenden Betreff, eine passende Anrede, Einleitung und einen passenden Schluss." Der Betreff ist also keine Kür.</p>
+<h3 id="beschwerdebrief-was-in-deiner-vorlage-noch-fehlt">Beschwerdebrief — was in deiner Vorlage noch fehlt</h3>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Baustein</strong></th>
+<th><strong>Formulierung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Betreff</td>
+<td>Betreff: <strong>Beschwerde über</strong> die Fahrradtour vom 14.03.</td>
+</tr>
+<tr>
+<td>Bezugnahme</td>
+<td><strong>Mit Bezug auf</strong> Ihre Anzeige vom … habe ich am … an Ihrer Radtour teilgenommen.</td>
+</tr>
+<tr>
+<td>Forderung (weicher)</td>
+<td><strong>Daher bitte ich Sie</strong>, mir den Betrag zu erstatten. / <strong>Ich erwarte von Ihnen, dass</strong> Sie …</td>
+</tr>
+<tr>
+<td>Fristsetzung</td>
+<td><strong>Ich setze Ihnen hierfür eine Frist bis zum</strong> 30.09.</td>
+</tr>
+<tr>
+<td>Konsequenz</td>
+<td><strong>Sollte ich bis dahin nichts von Ihnen hören</strong>, werde ich weitere Schritte in Erwägung ziehen.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Register:</strong> „Aus diesem Grund <strong>fordere ich Sie auf</strong>, …" ist für eine telc-B2-Beschwerde juristisch-hart und kann unter Kriterium 2 als unpassend gelten. Behalte es nur als zweite Eskalationsstufe.</p>
+<h3 id="anfrage-bitte-um-information-vorlage-167-woerter">Anfrage / Bitte um Information — Vorlage (167 Wörter)</h3>
+<p>Die zweite der beiden Szenarien, die das Handbuch nennt. Wiederverwendbar sind die <strong>Rahmen</strong>, nicht der Inhalt — im Ernstfall kommen die drei Punkte aus der Aufgabe.</p>
+
+<p><strong>Betreff:</strong> Anfrage zum Deutschkurs B2 ab Oktober</p>
+<p>Sehr geehrte Damen und Herren,</p>
+<p>mit großem Interesse habe ich Ihre Anzeige gelesen, in der Sie Deutschkurse auf dem Niveau B2 anbieten. Da ich meine Sprachkenntnisse für meine berufliche Weiterentwicklung verbessern möchte, hätte ich vorab noch einige Fragen.</p>
+<p><strong>Zunächst würde es mich interessieren, ob</strong> der Kurs auch berufsbegleitend besucht werden kann. Ich bin ganztägig beschäftigt, <strong>sodass</strong> für mich nur ein Abend- oder Wochenendkurs <strong>in Frage kommt</strong>. <strong>Es wäre sehr hilfreich, wenn</strong> Sie mir den genauen Stundenplan zusenden <strong>könnten</strong>.</p>
+<p><strong>Darüber hinaus wüsste ich gerne, ob</strong> in den Kursgebühren die Lehrmaterialien bereits enthalten sind oder ob diese zusätzlich angeschafft werden müssen. <strong>Falls</strong> es eine Ermäßigung für Frühbucher <strong>gibt</strong>, <strong>wäre ich Ihnen für einen entsprechenden Hinweis dankbar</strong>.</p>
+<p><strong>Abschließend möchte ich noch erfahren, wie</strong> groß die Gruppen sind, da ich in einem kleineren Kurs erfahrungsgemäß deutlich mehr zum Sprechen komme.</p>
+<p><strong>Über eine baldige Rückmeldung würde ich mich sehr freuen.</strong></p>
+<p>Mit freundlichen Grüßen</p>
+<p>Gunasekaran Chandrasekaran</p>
+
+<p><strong>Die vier B2-Strukturen darin, sichtbar gemacht:</strong> Modalpassiv (<strong>besucht werden kann</strong>), Funktionsverbgefüge (<strong>in Frage kommt</strong>), Konjunktiv II durchgehend, Konditionalsatz (<strong>Falls … gibt</strong>). Jeder Punkt hat einen <strong>Grund</strong> angehängt — das ist der Unterschied zwischen „genannt" und „ausgeführt".</p>
+</section>
+<section id="sprechen-ca-15-min-paarweise-20-min-vorbereitung"><h2>3. Sprechen — ca. 15 Min., paarweise, 20 Min. Vorbereitung<a class="anchor" href="#sprechen-ca-15-min-paarweise-20-min-vorbereitung" aria-label="Link">#</a></h2>
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><strong>Vorbereitung:</strong> 20 Minuten, <strong>allein</strong>. Kein Wörterbuch, <strong>keine Absprache mit dem Partner</strong>. Im Vorbereitungsraum bekommst du die Blätter für <strong>Teil 2 und 3</strong> — Teil 1 wird zu Hause vorbereitet.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Teil</strong></th>
+<th><strong>Aufgabe</strong></th>
+<th><strong>Ablauf</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>Einander kennenlernen</td>
+<td>ca. 1 Min. <strong>Wird nicht bewertet.</strong> Aufwärmen, nicht auswendig lernen.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Über Erfahrungen sprechen</td>
+<td>Monolog <strong>ca. 1½ Min.</strong> über 1 von 7 Themen (zu Hause vorbereitet), danach Fragen des Partners. Ca. 5 Min. fürs Paar.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Diskussion</td>
+<td>Kurzer kontroverser Zeitungsartikel, <strong>alle bekommen den gleichen Text</strong>. Erst Hauptaussagen wiedergeben, dann diskutieren.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Gemeinsam etwas planen</td>
+<td>Gemeinsam eine Aktivität planen und sich einigen.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Bewertung, alle drei Teile gleich:</strong> Ausdrucksfähigkeit · Aufgabenbewältigung · Formale Richtigkeit · Aussprache und Intonation. Je 25 Punkte.</p>
+<h3 id="teil-1-der-fehler-den-man-hier-macht">Teil 1 — der Fehler, den man hier macht</h3>
+<p>Es ist <strong>kein Vortrag über ein Thema</strong>, sondern ein Bericht über <strong>deine eigene Erfahrung</strong>. Wer nur Inhalt und Ablauf nachzählt (Handlung des Films, Stationen der Reise), verliert Punkte bei der Aufgabenbewältigung. Die Bewertung fragt: eigene Wertung genannt? eigene Wertung <strong>begründet</strong>?</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Schritt</strong></th>
+<th><strong>Formulierung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Einstieg</td>
+<td>Ich möchte Ihnen heute <strong>von einer persönlichen Erfahrung berichten</strong>, die mich sehr geprägt hat: …</td>
+</tr>
+<tr>
+<td>Kontext</td>
+<td>Das war vor etwa … Jahren, als ich …</td>
+</tr>
+<tr>
+<td>Schilderung</td>
+<td>Besonders in Erinnerung geblieben ist mir, dass … / Was mich dabei überrascht hat, war …</td>
+</tr>
+<tr>
+<td>Wertung</td>
+<td>Rückblickend würde ich sagen, dass … / Im Nachhinein bin ich froh, dass …</td>
+</tr>
+<tr>
+<td>Pflicht-Abschluss</td>
+<td><strong>Diese Erfahrung war für mich deshalb so wichtig, weil …</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="teil-2-erst-wiedergeben-dann-diskutieren">Teil 2 — erst wiedergeben, dann diskutieren</h3>
+<p>Der Schritt „Hauptaussagen wiedergeben" fehlt in deinem Dokument komplett. Hier gehört auch Konjunktiv I hin.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Schritt</strong></th>
+<th><strong>Formulierung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text benennen</td>
+<td>Der Text trägt die Überschrift „…" / Der Titel des Textes lautet …</td>
+</tr>
+<tr>
+<td>Kernfrage</td>
+<td>Der Text handelt <strong>von der Frage, ob</strong> …</td>
+</tr>
+<tr>
+<td>Position des Autors</td>
+<td>Der Autor <strong>vertritt die Auffassung, dass</strong> … / Im Text wird kritisiert, dass …</td>
+</tr>
+<tr>
+<td>Konjunktiv I</td>
+<td>Die Studie kommt zu dem Ergebnis, das Problem <strong>sei</strong> größer als angenommen.</td>
+</tr>
+<tr>
+<td>Überleiten</td>
+<td>Dazu möchte ich gerne Stellung nehmen. / Ich sehe das etwas anders, denn …</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="den-partner-einbeziehen-wird-mitbewertet">Den Partner einbeziehen — wird mitbewertet</h3>
+<p>Wer nie das Wort zurückgibt, kommt bei der Aufgabenbewältigung nicht über B/C hinaus.</p>
+
+<p>• Wie sind <strong>deine Erfahrungen</strong> damit?</p>
+<p>• Siehst du das auch so? / Wie siehst du das?</p>
+<p>• Was würdest du <strong>an meiner Stelle</strong> tun?</p>
+<p>• Kannst du das genauer erklären? Das habe ich nicht ganz verstanden.</p>
+<p>• Wie ist das eigentlich in deinem Heimatland?</p>
+
+<h3 id="teil-3-planen-und-sich-einigen">Teil 3 — Planen und sich einigen</h3>
+
+<p>• Ich schlage vor, dass wir … / Wie wäre es, wenn wir …?</p>
+<p>• Damit bin ich einverstanden, <strong>allerdings</strong> sollten wir bedenken, dass …</p>
+<p>• <strong>Als Kompromiss</strong> könnten wir … / Können wir uns darauf einigen, dass …?</p>
+<p>• Dann halten wir also fest: … Sind wir uns da einig?</p>
+</section>
+<section id="teil-1-themen-mit-vorsicht"><h2>4. Teil-1-Themen — mit Vorsicht<a class="anchor" href="#teil-1-themen-mit-vorsicht" aria-label="Link">#</a></h2>
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><strong>Nur zwei sind belegt.</strong> Das Handbuch nennt als Beispiele ausschließlich: <strong>ein Buch, das Sie gelesen haben</strong> (Thema, Autor, Meinung) und <strong>ein Film, den Sie gesehen haben</strong> (Thema und Handlung, Schauspieler, Meinung). Es sagt, der Input sei „eine Liste mit sieben Themen", nennt die anderen fünf aber nicht.</td>
+</tr>
+</tbody>
+</table></div>
+<p>In Lehrmaterialien Dritter zirkuliert seit Jahren diese Liste, deren erste beiden Punkte mit dem Handbuch übereinstimmen. <strong>Nicht von telc bestätigt</strong> — als Trainingsraster brauchbar, als Tatsache nicht:</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Nr.</strong></th>
+<th><strong>Thema</strong></th>
+<th><strong>Stichpunkte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 ✓</td>
+<td>Ein Buch, das Sie gelesen haben</td>
+<td>Thema, Autor, Ihre Meinung — <strong>im Handbuch belegt</strong></td>
+</tr>
+<tr>
+<td>2 ✓</td>
+<td>Ein Film, den Sie gesehen haben</td>
+<td>Thema und Handlung, Schauspieler, Ihre Meinung — <strong>im Handbuch belegt</strong></td>
+</tr>
+<tr>
+<td>3 ?</td>
+<td>Eine Reise</td>
+<td>Ziel, Zeit, Land und Leute, Sehenswürdigkeiten</td>
+</tr>
+<tr>
+<td>4 ?</td>
+<td>Ein Sportereignis</td>
+<td>Sportart, Ort, Personen, Ergebnis</td>
+</tr>
+<tr>
+<td>5 ?</td>
+<td>Eine Musikveranstaltung</td>
+<td>Musikrichtung, Musiker, Ort</td>
+</tr>
+<tr>
+<td>6 ?</td>
+<td>Eine wichtige Person in Ihrem Leben</td>
+<td>wer, wann, warum wichtig</td>
+</tr>
+<tr>
+<td>7 ?</td>
+<td>Eine wichtige Erfahrung</td>
+<td>was, wann, wo, mit wem, warum wichtig</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Vorgehen:</strong> Übungstest 1 herunterladen und die echte Liste dort nachlesen. Bis dahin nicht sieben Anekdoten pauken, sondern <strong>zwei bis drei flexible Erlebnisse</strong>, die man auf mehrere Themen biegen kann — der Umzug nach Deutschland passt auf Reise, wichtige Erfahrung und wichtige Person zugleich.</p>
+</section>
+<section id="die-16-offiziellen-themenbereiche-anhang-t"><h2>5. Die 16 offiziellen Themenbereiche (Anhang T)<a class="anchor" href="#die-16-offiziellen-themenbereiche-anhang-t" aria-label="Link">#</a></h2>
+<p>Der Stichprobenrahmen für <strong>die ganze Prüfung</strong> — Lesen, Hören, Sprachbausteine, Schreiben und Sprechen. Nicht mit der Teil-1-Liste verwechseln.</p>
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td>1. Angaben zur eigenen Person</td>
+<td>9. Geschäfte, Handel, Konsum</td>
+</tr>
+<tr>
+<td>2. Der menschliche Körper, Gesundheit, Körperpflege</td>
+<td>10. Dienstleistungen</td>
+</tr>
+<tr>
+<td>3. Wohnen</td>
+<td>11. Natur und Umwelt</td>
+</tr>
+<tr>
+<td>4. Orte</td>
+<td>12. Reise und Verkehr</td>
+</tr>
+<tr>
+<td>5. Tägliches Leben</td>
+<td>13. Freizeit und Unterhaltung</td>
+</tr>
+<tr>
+<td>6. Essen und Trinken</td>
+<td>14. Medien und moderne Informationstechniken</td>
+</tr>
+<tr>
+<td>7. Erziehung, Ausbildung, Lernen</td>
+<td>15. Gesellschaft, Staat, Regierung</td>
+</tr>
+<tr>
+<td>8. Arbeit und Beruf</td>
+<td>16. Beziehungen zu anderen Menschen und Kulturen</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="lesen-die-telc-fallen"><h2>6. Lesen — die telc-Fallen<a class="anchor" href="#lesen-die-telc-fallen" aria-label="Link">#</a></h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Falle</strong></th>
+<th><strong>Gegenmittel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wortgleichheits-Falle</strong></td>
+<td>Der Distraktor <strong>wiederholt</strong> die Wörter des Textes; die richtige Antwort <strong>paraphrasiert</strong> sie. Klingt eine Option verdächtig genau wie der Text, ist sie meistens falsch.</td>
+</tr>
+<tr>
+<td><strong>Extremwörter</strong></td>
+<td><strong>immer, nur, alle, ausschließlich, niemals, jeder</strong> sind verdächtig — oft wahr-aber-übertrieben. Richtige Optionen relativieren: <strong>meist, häufig, in der Regel, tendenziell</strong>. Nicht blind streichen, aber genau prüfen.</td>
+</tr>
+<tr>
+<td><strong>Eigene Logik</strong></td>
+<td>Eine Option kann vernünftig klingen und trotzdem falsch sein, weil <strong>der Text sie nicht behauptet</strong>. Immer fragen: steht das da?</td>
+</tr>
+<tr>
+<td><strong>Teil 3, Zuordnung</strong></td>
+<td>Jede Bedingung der Situation muss erfüllt sein. Eine einzige Abweichung disqualifiziert. Zwei Anzeigen passen zu nichts.</td>
+</tr>
+<tr>
+<td><strong>Partizipialattribute</strong></td>
+<td>„die im letzten Jahr von der Regierung <strong>beschlossenen</strong> Maßnahmen": Artikel lesen → zum Nomen springen → dann die Mitte.</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="hoeren-richtig-falsch-richtig-verstehen"><h2>7. Hören — Richtig/Falsch richtig verstehen<a class="anchor" href="#hoeren-richtig-falsch-richtig-verstehen" aria-label="Link">#</a></h2>
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><strong>telc definiert den Schlüssel so:</strong> <strong>richtig</strong> heißt, die Information <strong>lässt sich am Text bestätigen</strong>. Ein <strong>falsch</strong>-Item beruht ausdrücklich <strong>nicht</strong> auf dem Konzept „die Information steht nicht im Text". Es gibt also keine versteckte „nicht erwähnt"-Option: falsch heißt, <strong>der Text widerspricht der Aussage</strong>. Findest du weder Bestätigung noch Widerspruch, hast du etwas überhört — nicht auf <strong>falsch</strong> ausweichen.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Signal</strong></th>
+<th><strong>Warum</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Meinungswechsel</strong></td>
+<td>Allerdings, jedoch, doch, eigentlich, trotzdem, dennoch, im Gegensatz dazu, aber → die erste Information ist der <strong>Köder</strong>. Die Antwort kommt <strong>danach</strong>.</td>
+</tr>
+<tr>
+<td><strong>Umkehr-Eröffnungen</strong></td>
+<td>„Ja, aber …" / „Im Prinzip schon, allerdings …" / „Grundsätzlich …, dennoch …" / „Eigentlich wollte ich …, aber …"</td>
+</tr>
+<tr>
+<td><strong>Zahlen werden korrigiert</strong></td>
+<td>ursprünglich, früher, zuerst <strong>vs.</strong> jetzt, heute, inzwischen → „kostete ursprünglich 500 €, inzwischen 450" → <strong>450</strong>.</td>
+</tr>
+<tr>
+<td><strong>Verneinungen</strong></td>
+<td>nicht, kein, nie, kaum, selten werden schnell gesprochen und überhört. „Das ist <strong>kaum</strong> zu glauben" ≠ „Das ist zu glauben".</td>
+</tr>
+<tr>
+<td><strong>Begründungen</strong></td>
+<td>„Nicht weil …, sondern weil …" → auf das <strong>sondern</strong> hören.</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="sprachbausteine-30-punkte-3-schritte"><h2>8. Sprachbausteine — 30 Punkte, 3 Schritte<a class="anchor" href="#sprachbausteine-30-punkte-3-schritte" aria-label="Link">#</a></h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr>
+<th><strong>Schritt</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Den ganzen Satz lesen, auch nach der Lücke.</strong> Der Teil danach entscheidet oft über Präposition, Kasus oder Konjunktion.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Erst die Wortart bestimmen, dann die Optionen ansehen.</strong> Fehlt eine Konjunktion? eine Präposition mit festem Kasus? eine Verbform? ein Nomen mit Endung?</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Die Verbposition verrät den Worttyp.</strong> Verb am Ende → Konjunktion (<strong>weil, obwohl, damit</strong>). Verb auf Position 2 → Adverb (<strong>deshalb, trotzdem, allerdings</strong>). Kein Nebensatz → Präposition (<strong>wegen, trotz, aufgrund</strong>).</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Teil 1</strong> ist Grammatik in einer halbformellen E-Mail — also genau deine Konnektoren-, Kasus-, Konjunktiv- und Passiv-Tabellen. <strong>Teil 2</strong> ist Lexik in einem Zeitungsartikel: 15 Wörter im Kasten für 10 Lücken, also 5 Ablenker. Dafür sind Wortbildung, Funktionsverbgefüge und Nomen/Adjektive mit Präpositionen aus dem Addendum das Kernmaterial.</p>
+</section>
+<section id="selbst-nachpruefen"><h2>9. Selbst nachprüfen<a class="anchor" href="#selbst-nachpruefen" aria-label="Link">#</a></h2>
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><p>Diese drei Punkte sind <strong>nicht</strong> aus dem Handbuch belegt und stehen hier bewusst getrennt:</p>
+<p>1. <strong>Wird der Hörtext nur einmal abgespielt?</strong> Sekundärquellen sagen ja, das Handbuch sagt dazu nichts. Prüfe es an den Audiodateien des Übungstests.</p>
+<p>2. <strong>Die fünf unbelegten Teil-1-Themen</strong> (s. Abschnitt 4).</p>
+<p>3. <strong>Enthält der Diskussionstext in Teil 2 regelmäßig Zahlen oder Grafiken?</strong> Das Handbuch-Beispiel nennt eine Studie mit Umfragewerten, aber „regelmäßig" ist nicht belegt. Behalte deine Grafik-Redemittel, verlasse dich nicht darauf.</p>
+<p>Alles kostenlos: <strong>telc_deutsch_b2.zip</strong> (Übungstest 1 mit Audio und Lösungen) von der telc-Seite zu telc Deutsch B2.</p></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<div class="pager"><a href="schreiben.html">← Schreiben</a><a href="lesen.html">Lesen →</a></div>
+</main>
+<script src="assets/search-index.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
