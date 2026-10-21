@@ -18,3 +18,4 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versio
 - German flag branding: SVG flag in the sidebar brand and in a mobile top bar, SVG favicon, and 🇩🇪 in page titles.
 - Site footer with copyright, license and repository links.
 - README section on reporting errors via GitHub issues.
+- Cache-busting `?v=<hash>` on CSS/JS links so browsers pick up new styles right after a deploy; explicit size on the flag SVG as a fallback.

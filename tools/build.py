@@ -6,6 +6,7 @@ Usage:  python tools/build.py        (requires pandoc on PATH, stdlib only, test
 Generated files (do not edit by hand): index.html, checkliste.html, pruefung.html,
 sprechen.html, schreiben.html, lesen.html, hoeren.html, grammatik/*.html, assets/search-index.js
 """
+import hashlib
 import html
 import json
 import re
@@ -215,7 +216,7 @@ def sidebar(root, current, page_sections):
 # German flag as inline SVG: flag emoji render as plain "DE" letters on Windows, SVG looks the same everywhere.
 _FLAG_RECTS = ('<rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#d00"/>'
                '<rect y="2" width="5" height="1" fill="#ffce00"/>')
-FLAG_SVG = ('<svg class="flag" viewBox="0 0 5 3" role="img" aria-label="Deutschland">'
+FLAG_SVG = ('<svg class="flag" viewBox="0 0 5 3" width="28" height="17" role="img" aria-label="Deutschland">'
             + _FLAG_RECTS + "</svg>")
 FAVICON = ("%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 3'%3E"
            + _FLAG_RECTS.replace('"', "'").replace("#", "%23").replace("<", "%3C").replace(">", "%3E")
@@ -249,7 +250,7 @@ def page(root, filename, title, body, page_sections=(), lead=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>🇩🇪 {html.escape(title) if filename == "index.html" else html.escape(title) + " · telc Deutsch B2"}</title>
 <link rel="icon" href="data:image/svg+xml,{FAVICON}">
-<link rel="stylesheet" href="{root}assets/style.css">
+<link rel="stylesheet" href="{root}assets/style.css?v=__V__">
 <script>document.documentElement.dataset.theme = localStorage.getItem('telc-b2-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script>
 </head>
 <body data-root="{root}">
@@ -264,8 +265,8 @@ def page(root, filename, title, body, page_sections=(), lead=""):
 {prev_next}
 {FOOTER}
 </main>
-<script src="{root}assets/search-index.js"></script>
-<script src="{root}assets/app.js"></script>
+<script src="{root}assets/search-index.js?v=__V__"></script>
+<script src="{root}assets/app.js?v=__V__"></script>
 </body>
 </html>
 """
@@ -394,6 +395,16 @@ def build_index(units):
         encoding="utf-8")
 
 
+def stamp_asset_versions():
+    """Cache-busting: replace the ?v=__V__ placeholder with a hash of the assets (GitHub Pages caches 10 min)."""
+    h = hashlib.sha1()
+    for name in ("style.css", "app.js", "search-index.js"):
+        h.update((ROOT / "assets" / name).read_bytes())
+    v = h.hexdigest()[:8]
+    for f in [*ROOT.glob("*.html"), *ROOT.glob("grammatik/*.html")]:
+        f.write_text(f.read_text(encoding="utf-8").replace("__V__", v), encoding="utf-8")
+
+
 def main():
     sections = parse_reference()
     s3, anchors = parse_step3()
@@ -411,6 +422,7 @@ def main():
     (ROOT / "assets").mkdir(exist_ok=True)
     (ROOT / "assets" / "search-index.js").write_text(
         "window.SEARCH_INDEX = " + json.dumps(search, ensure_ascii=False) + ";\n", encoding="utf-8")
+    stamp_asset_versions()
     print(f"Built {len(ALL_CONTENT_PAGES) + 2} pages, {len(sections)} sections, {units} checklist units.")
 
 
