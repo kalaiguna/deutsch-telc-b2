@@ -63,3 +63,12 @@ tr.unit.done td:nth-child(3){text-decoration:line-through}
  tr{break-inside:avoid}
  h2{break-after:avoid}
 }
+
+.flag{width:28px;height:17px;vertical-align:-.15em;margin-right:.45em;border-radius:3px;box-shadow:0 0 0 1px var(--line)}
+.brand .flag{display:inline-block}
+.mobile-brand{display:none;position:fixed;z-index:20;top:.6rem;left:50%;transform:translateX(-50%);height:2.4rem;align-items:center;padding:0 .8rem;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--accent);font-weight:800;text-decoration:none;white-space:nowrap}
+.mobile-brand .flag{margin-right:.4rem}
+@media(max-width:860px){.mobile-brand{display:flex}}
+@media print{.mobile-brand{display:none!important}}
+.site-footer{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;text-align:center}
+.site-footer a{color:inherit}

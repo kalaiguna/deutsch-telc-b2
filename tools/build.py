@@ -195,7 +195,7 @@ def sidebar(root, current, page_sections):
         return f'<a href="{root}{href}"{active}>{html.escape(label)}</a>'
 
     out = ['<nav class="sidebar" id="sidebar" aria-label="Navigation">',
-           f'<a class="brand" href="{root}index.html">telc B2<span>Companion</span></a>',
+           f'<a class="brand" href="{root}index.html">{FLAG_SVG}telc B2<span>Companion</span></a>',
            '<input type="search" id="search" placeholder="Suchen …" autocomplete="off" aria-label="Suche">',
            '<div id="search-results" class="search-results" hidden></div>',
            '<div class="nav-group">', a("index.html", "Start"), a(CHECKLIST[0], "Checkliste"), "</div>",
@@ -210,6 +210,22 @@ def sidebar(root, current, page_sections):
         out.append("</div>")
     out.append("</nav>")
     return "\n".join(out)
+
+
+# German flag as inline SVG: flag emoji render as plain "DE" letters on Windows, SVG looks the same everywhere.
+_FLAG_RECTS = ('<rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#d00"/>'
+               '<rect y="2" width="5" height="1" fill="#ffce00"/>')
+FLAG_SVG = ('<svg class="flag" viewBox="0 0 5 3" role="img" aria-label="Deutschland">'
+            + _FLAG_RECTS + "</svg>")
+FAVICON = ("%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 3'%3E"
+           + _FLAG_RECTS.replace('"', "'").replace("#", "%23").replace("<", "%3C").replace(">", "%3E")
+           + "%3C/svg%3E")
+
+
+REPO = "https://github.com/kalaiguna/deutsch-telc-b2"
+FOOTER = ('<footer class="site-footer">© 2026 <a href="https://github.com/kalaiguna">Gunasekaran Chandrasekaran</a> · '
+          f'<a href="{REPO}/blob/main/LICENSE">MIT License</a> · <a href="{REPO}">GitHub</a> · '
+          'Nicht verbunden mit der telc gGmbH.</footer>')
 
 
 def page(root, filename, title, body, page_sections=(), lead=""):
@@ -231,12 +247,14 @@ def page(root, filename, title, body, page_sections=(), lead=""):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(title)} · telc Deutsch B2</title>
+<title>🇩🇪 {html.escape(title) if filename == "index.html" else html.escape(title) + " · telc Deutsch B2"}</title>
+<link rel="icon" href="data:image/svg+xml,{FAVICON}">
 <link rel="stylesheet" href="{root}assets/style.css">
 <script>document.documentElement.dataset.theme = localStorage.getItem('telc-b2-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script>
 </head>
 <body data-root="{root}">
 <button class="menu-btn" id="menu-btn" aria-label="Menü">☰</button>
+<a class="mobile-brand" href="{root}index.html">{FLAG_SVG}telc B2</a>
 <button class="theme-btn" id="theme-btn" aria-label="Dark/Light">◐</button>
 {sidebar(root, filename, page_sections)}
 <main>
@@ -244,6 +262,7 @@ def page(root, filename, title, body, page_sections=(), lead=""):
 {f'<p class="lead">{html.escape(lead)}</p>' if lead else ''}
 {body}
 {prev_next}
+{FOOTER}
 </main>
 <script src="{root}assets/search-index.js"></script>
 <script src="{root}assets/app.js"></script>

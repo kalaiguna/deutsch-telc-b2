@@ -15,3 +15,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versio
 - Cross-link to the `deutsch-lernpaket` repository in the README and on the start page.
 - Source attribution and telc trademark notice (README and `pruefung.html`).
 - Checklist Phase 3 `Step3 →` references link to the matching sections of `pruefung.html`.
+- German flag branding: SVG flag in the sidebar brand and in a mobile top bar, SVG favicon, and 🇩🇪 in page titles.
+- Site footer with copyright, license and repository links.
+- README section on reporting errors via GitHub issues.

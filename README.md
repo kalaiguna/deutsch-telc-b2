@@ -50,6 +50,10 @@ source/                              original .docx files
 
 Planned work (e.g. vocabulary pages by word class and CEFR level) is tracked in [BACKLOG.md](BACKLOG.md).
 
+## Feedback and corrections
+
+Found a mistake in a grammar table, a broken link or a wrong translation? Please [open an issue](https://github.com/kalaiguna/deutsch-telc-b2/issues/new) with the page name and what should be changed. Issues only, please: the content comes from Word files, so it is easier for me to fix it at the source and regenerate the pages.
+
 ## Sources and attribution
 
 - `pruefung.html` (from `telc_B2_Pruefungsschicht_Step3.docx`) summarises the *telc Deutsch B2 Handbuch* (8th ed., 2019) and the official telc exam page. Rights to the handbook and telc exam materials belong to telc gGmbH / its publisher; nothing here claims otherwise. The page carries a notice to this effect.
